@@ -45,3 +45,57 @@
       50% { opacity: 1 }
     }
 
+.fog{
+    position:fixed;
+    bottom: 0; left: 0;
+    width: 200%; height: 200px;
+    background: Linear-gradient(transparent, rgba(139,0,0,0.08));
+    animation: movefog 8s linear infinite;
+    pointer-events:none;
+
+}
+@keyframes movefog {
+    from{transform: translateX(0) }
+    to{transform: translateX(-50) }
+}
+
+.drips-wrap{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    pointer-events:none 
+
+}
+.drip{
+    width:12px;
+    height: 0;
+    background: var(--red);
+    border-radius: 0 0 50% 50%;
+    position:absolute;
+    animation: dripdown var(--t) ease-in var(--d) infinite;
+
+}
+@keyframes dripdown{
+    0%{ height:0; opacity:1}
+    60%{height:var(--h); opacity:1}
+    100%{height:var(--h); opacity:0}
+}
+ 
+ #sndbtn{
+      position: fixed; top:16px; right:16px; z-index:200;
+      background: rgba(139,0,0,.3);
+      border: 1px solid var(--red);
+      color: var(--text);
+      font-size:20px;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center;justify-content:center;
+      transition:background .3s;
+      backdrop-filter:blur(4px);
+    }
+    #sndbtn:hover { background: rgba(139,0,0,.6) }
+
+
+  
