@@ -98,4 +98,58 @@
     #sndbtn:hover { background: rgba(139,0,0,.6) }
 
 
+#enterscreen{
+  position:fixed; inset: 0;
+  background:rgba(0,0,0,.93);
+  z-index:300;
+  display:flex; flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:24px;
+  animation: fadein 1s ease;
+}
+#enterscreen h2{
+  font-family:'Nosifer', cursive;
+  color: var(--red);
+  font-size:clamp(22px,5vw,42px);
+  text-shadow: 0 0 30px var(--glow);
+  letter-spacing:3px;
+  text-align: center;
+  padding: 0 20px;
+  animation: txt_flicker 3s infinite;
+}
+#enterscreen p{
+  color:var(--text);
+  font-size: 14px;
+  letter-spacing:2px;
+  opacity: .6;
+}
+.bigskull{
+  font-size:70px;
+  animation: skull_float 3s ease-in-out infinite;
+  filter:drop-shadow(0 0 20px var(--red));
+}
+.enterbtn{
+  padding: 18px 60px;
+  background: var(--red);
+  border:none;
+  color: var(--text);
+  font-family:'creepster', cursive;
+  font-size:26px;
+  letter-spacing:5px;
+  cursor:pointer;
+  border-radius:4px;
+  transition: all .3s;
+  box-shadow: 0 0 40px rgba(139,0,0,.8);
+  text-transform:uppercase;
+  animation: btn_pulse 2s ease-in-out infinite;
   
+}
+@keyframes btn_pulse{
+  0%,100%{box-shadow: 0 0 30px rgba(139,0,0,.6)}
+  50%{box-shadow:0 0 60px rgba(255,0,0,.9 )}
+}
+.enterbtn:hover{
+  background:#aa0000;
+  transform:scale(1.05)
+}
+
