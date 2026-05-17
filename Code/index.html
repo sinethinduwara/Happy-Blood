@@ -239,9 +239,12 @@ h1.title{
   position:relative; overflow:hidden;
 }
 
-
-
-
+.gobtn::before{
+  content:'';position:absolute; inset:0;
+  background:repeating-linear-gradient(transparent,transparent 2px, rgba(0,0,0.06)2px, rgba(0,0,0,.06)4px);
+}
+.gobtn:hover{background:#a00000; box-shadow:0 0 50px rgba(255,0,0,.8); transform:scale(1.04); letter-spacing:6px}
+.gobtn:active { transform:scale(.97) }
 
 
 
