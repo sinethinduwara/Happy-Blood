@@ -153,3 +153,105 @@
   transform:scale(1.05)
 }
 
+#homescreen{
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  gap:30px;
+  z-index:10px;
+  padding:20px;
+  text-align:center;
+}
+#homescreen.visible{
+  display:flex;
+  animation: fadein .9s ease}
+
+@keyframes fadein{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacitiy:1;transform:translateY(0)}
+}
+.homeskull{
+  font-size:80px;
+  animation:skull_flooat 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px var(--red));
+}
+@keyframes skull_float{
+  0%,100%{ transform:translateY(0) ratate(-5deg)}
+  50%{ transform: translateY(-15px) rotate(5deg) }
+}
+h1.title{
+  font-family: 'Nosifer', cursive;
+  font-size: clamp(28px,6vw,60px);
+  color: var(--red);
+  text-shadow: 0 0 30px var(--glow), 0 0 60px rgba(255,0,0,.3);
+  Letter-spacing:4px;
+  animation: txt_flicker 3s infinite;
+  line-height: 1.2;
+
+}
+@keyframes txt_flicker{
+  0%,94%,100%{ opacity:1}
+  95%{ opacity:.4}
+  96%{ opacity:1}
+  97%{ opacity:.15}
+  98%{ opacity:1}
+
+
+}
+
+.sub {color:var(--text); font-size:15px; letter-spacing:3px; text-transform:uppercase; opacity:.7}
+
+.name-wrap {width:min(400px,90vw)}
+#namefield{
+  width:100%;
+  padding: 16px 24px;
+  background: rgba(139,0,0,.1);
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  color:var(--text);
+  font-family: 'special Elite',cusive;
+  font-size:20px;
+  text-align:center;
+  letter-spacing:2px;
+  outline:none;
+  transition:all .3s;
+  box-shadow:inset 0 0 20px rgba(139,0,0,.2), 0 0 20px rgba(139,0,0,.3);
+  
+}
+#namefield::placeholder{ color:rgba(212,196,160,.3); font-size:15px}
+#namefield:focus{
+  border-color: var(--glow);
+  box-shadow:inset 0 0 20px rgba(139,0,0,.3), 0 0 40px rgba(255,0,0,.5);
+}
+.gobtn{
+  padding:16px 50px;
+  background: var(--red);
+  border:none;
+  color:var(--text);
+  font-family:'creepster', cursive;
+  font-size:24px;
+  letter-spacing:4px;
+  cursor:pointer;
+  border-radius:4px;
+  transition: all .3s;
+  box-shadow: 0 0 30px rgba(139,0,0,.6);
+  text-transform: uppercase;
+  position:relative; overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
